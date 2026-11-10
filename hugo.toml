@@ -1,0 +1,81 @@
+# 买好域名后，把这里改成你的域名，例如 https://example.com/
+baseURL = "https://example.com/"
+languageCode = "zh-CN"
+defaultContentLanguage = "zh"
+title = "我的博客"
+theme = "PaperMod"
+
+hasCJKLanguage = true          # 中文字数和阅读时间统计正确
+enableRobotsTXT = true         # 用 layouts/robots.txt 生成 robots.txt
+enableEmoji = true
+
+[pagination]
+  pagerSize = 10
+
+[markup.goldmark.renderer]
+  unsafe = true                # 允许在 Markdown 里写少量 HTML
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]   # JSON 用于站内搜索
+
+[services.rss]
+  limit = 20
+
+[params]
+  env = "production"
+  description = "在这里写一句话介绍你的博客"
+  author = "你的笔名"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowWordCount = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  ShowShareButtons = false
+  ShowRssButtonInSectionTermList = true
+  displayFullLangName = true
+  DateFormat = "2006-01-02"
+
+  [params.homeInfoParams]
+    Title = "你好"
+    Content = "这里是我的文章存档。文章同步发布在知乎等平台，这里是原稿。"
+
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/williamwang10000"
+
+[[menu.main]]
+  identifier = "posts"
+  name = "文章"
+  url = "/posts/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "archives"
+  name = "归档"
+  url = "/archives/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "tags"
+  name = "标签"
+  url = "/tags/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "search"
+  name = "搜索"
+  url = "/search/"
+  weight = 40
+
+[[menu.main]]
+  identifier = "about"
+  name = "关于"
+  url = "/about/"
+  weight = 50

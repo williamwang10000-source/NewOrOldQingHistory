@@ -1,8 +1,7 @@
 # 网站域名
 baseURL = "https://secondreading.net/"
-locale = "zh-CN"
 defaultContentLanguage = "zh"
-title = "我的博客"
+defaultContentLanguageInSubdir = false   # 中文在根目录，英文在 /en/
 theme = "PaperMod"
 
 hasCJKLanguage = true          # 中文字数和阅读时间统计正确
@@ -21,9 +20,9 @@ enableEmoji = true
 [services.rss]
   limit = 20
 
+# 两种语言共用的设置
 [params]
   env = "production"
-  description = "在这里写一句话介绍你的博客"
   author = "你的笔名"
   defaultTheme = "auto"
   ShowReadingTime = true
@@ -38,44 +37,88 @@ enableEmoji = true
   displayFullLangName = true
   DateFormat = "2006-01-02"
 
-  [params.homeInfoParams]
-    Title = "你好"
-    Content = "这里是我的文章存档。文章同步发布在知乎等平台，这里是原稿。"
-
   [[params.socialIcons]]
     name = "rss"
-    url = "/index.xml"
+    url = "index.xml"
 
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/williamwang10000-source"
 
-[[menu.main]]
-  identifier = "posts"
-  name = "文章"
-  url = "/posts/"
-  weight = 10
+# ---------- 中文（默认，网站根目录） ----------
+[languages.zh]
+  label = "中文"
+  locale = "zh-CN"
+  weight = 1
+  title = "我的博客"
 
-[[menu.main]]
-  identifier = "archives"
-  name = "归档"
-  url = "/archives/"
-  weight = 20
+  [languages.zh.params]
+    description = "在这里写一句话介绍你的博客"
+    [languages.zh.params.homeInfoParams]
+      Title = "你好"
+      Content = "这里是我的文章存档。文章同步发布在知乎等平台，这里是原稿。"
 
-[[menu.main]]
-  identifier = "tags"
-  name = "标签"
-  url = "/tags/"
-  weight = 30
+  [[languages.zh.menus.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 10
+  [[languages.zh.menus.main]]
+    identifier = "archives"
+    name = "归档"
+    url = "/archives/"
+    weight = 20
+  [[languages.zh.menus.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 30
+  [[languages.zh.menus.main]]
+    identifier = "search"
+    name = "搜索"
+    url = "/search/"
+    weight = 40
+  [[languages.zh.menus.main]]
+    identifier = "about"
+    name = "关于"
+    url = "/about/"
+    weight = 50
 
-[[menu.main]]
-  identifier = "search"
-  name = "搜索"
-  url = "/search/"
-  weight = 40
+# ---------- English (/en/) ----------
+[languages.en]
+  label = "English"
+  locale = "en"
+  weight = 2
+  title = "Second Reading"
 
-[[menu.main]]
-  identifier = "about"
-  name = "关于"
-  url = "/about/"
-  weight = 50
+  [languages.en.params]
+    description = "Notes on Qing history and how it gets translated, retold, and reread."
+    [languages.en.params.homeInfoParams]
+      Title = "Second Reading"
+      Content = "English versions of my articles on Qing history. Most are originally written in Chinese."
+
+  [[languages.en.menus.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/en/posts/"
+    weight = 10
+  [[languages.en.menus.main]]
+    identifier = "archives"
+    name = "Archive"
+    url = "/en/archives/"
+    weight = 20
+  [[languages.en.menus.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/en/tags/"
+    weight = 30
+  [[languages.en.menus.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/en/search/"
+    weight = 40
+  [[languages.en.menus.main]]
+    identifier = "about"
+    name = "About"
+    url = "/en/about/"
+    weight = 50

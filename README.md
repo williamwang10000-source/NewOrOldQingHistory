@@ -1,4 +1,6 @@
-# blog
+# Second Reading
+
+博客地址：https://secondreading.net （English: https://secondreading.net/en/）
 
 Hugo + PaperMod 搭的个人博客，部署在 Cloudflare Pages。
 

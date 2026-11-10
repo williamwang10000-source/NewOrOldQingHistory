@@ -22,7 +22,7 @@ git add . && git commit -m "新文章：xxx" && git push
 主题是 git submodule，克隆时要带上：
 
 ```bash
-git clone --recurse-submodules https://github.com/williamwang10000/blog.git
+git clone --recurse-submodules https://github.com/williamwang10000-source/NewOrOldQingHistory.git
 ```
 
 ## Cloudflare Pages 部署设置

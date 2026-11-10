@@ -48,7 +48,7 @@ enableEmoji = true
 
   [[params.socialIcons]]
     name = "github"
-    url = "https://github.com/williamwang10000"
+    url = "https://github.com/williamwang10000-source"
 
 [[menu.main]]
   identifier = "posts"

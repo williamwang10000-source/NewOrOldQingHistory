@@ -23,7 +23,7 @@ enableEmoji = true
 # 两种语言共用的设置
 [params]
   env = "production"
-  author = "你的笔名"
+  author = "dashdash"
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowWordCount = true
@@ -50,13 +50,13 @@ enableEmoji = true
   label = "中文"
   locale = "zh-CN"
   weight = 1
-  title = "我的博客"
+  title = "再读"
 
   [languages.zh.params]
-    description = "在这里写一句话介绍你的博客"
+    description = "关于清史，以及它如何被翻译、转述和重读。"
     [languages.zh.params.homeInfoParams]
-      Title = "你好"
-      Content = "这里是我的文章存档。文章同步发布在知乎等平台，这里是原稿。"
+      Title = "再读"
+      Content = "关于清史，以及它如何被翻译、转述和重读。文章同步发布在知乎等平台，这里是原稿。"
 
   [[languages.zh.menus.main]]
     identifier = "posts"
@@ -95,7 +95,7 @@ enableEmoji = true
     description = "Notes on Qing history and how it gets translated, retold, and reread."
     [languages.en.params.homeInfoParams]
       Title = "Second Reading"
-      Content = "English versions of my articles on Qing history. Most are originally written in Chinese."
+      Content = "Notes on Qing history by dashdash. Most articles are written in Chinese first; these are the English versions."
 
   [[languages.en.menus.main]]
     identifier = "posts"
